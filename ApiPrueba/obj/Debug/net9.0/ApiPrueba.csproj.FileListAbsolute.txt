@@ -22,6 +22,9 @@ C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Microsoft.Ope
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Npgsql.dll
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\System.Composition.AttributedModel.dll
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\bin\Debug\net9.0\System.Composition.Convention.dll
@@ -87,6 +90,7 @@ C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.Ass
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.csproj.CoreCompileInputs.cache
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.sourcelink.json
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\scopedcss\bundle\ApiPrueba.styles.css
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\staticwebassets.development.json
@@ -103,4 +107,3 @@ C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\refint\ApiPru
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.pdb
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.genruntimeconfig.cache
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ref\ApiPrueba.dll
-C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.sourcelink.json
