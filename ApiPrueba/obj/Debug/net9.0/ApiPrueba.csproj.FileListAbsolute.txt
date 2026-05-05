@@ -103,3 +103,4 @@ C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\refint\ApiPru
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.pdb
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.genruntimeconfig.cache
 C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ref\ApiPrueba.dll
+C:\Users\Darwin\Desktop\PruebaGoDigital\ApiPrueba\obj\Debug\net9.0\ApiPrueba.sourcelink.json
