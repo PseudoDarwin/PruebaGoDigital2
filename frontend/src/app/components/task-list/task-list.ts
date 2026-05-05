@@ -1,18 +1,22 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task'; 
 import { Task } from '../../models/task';
-
+import { TaskFormComponent } from '../task-form/task-form';
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, TaskFormComponent],
   templateUrl: './task-list.html',
   styleUrls: ['./task-list.css'],
 })
 export class TaskListComponent implements OnInit, AfterViewInit {
   
 
+  selectedTask: Task = { id: 0, title: '', description: '', isCompleted: false };
+  editing = false;
+  showForm = false; 
   tasks: Task[] = [];
 
   constructor(private taskService: TaskService) {}
@@ -22,7 +26,6 @@ export class TaskListComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Esto se ejecuta cuando la vista ya está dibujada
     this.loadTasks();
   }
 
@@ -38,7 +41,6 @@ loadTasks(): void {
   }
 
 
-
   deleteTask(id: number): void {
     if (confirm('¿Estás seguro de que deseas eliminar esta tarea?')) {
       this.taskService.deleteTask(id).subscribe({
@@ -52,4 +54,22 @@ loadTasks(): void {
       });
     }
   }
+
+  prepareNewTask() {
+    this.selectedTask = { id: 0, title: '', description: '', isCompleted: false };
+    this.editing = false;
+    this.showForm = true;
+  }
+
+  prepareEditTask(task: Task) {
+    this.selectedTask = { ...task }; 
+    this.editing = true;
+    this.showForm = true;
+  }
+
+  handleSave() {
+    this.showForm = false;
+    this.loadTasks(); 
+  }
+ 
 }

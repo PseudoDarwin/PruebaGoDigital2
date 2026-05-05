@@ -7,45 +7,52 @@
   <div class="dashboard-container">
   <div class="table-header">
     <h2>Listado de Tareas</h2>
-    <button class="btn-add">+ Nueva Tarea</button>
+    <button (click)="prepareNewTask()" class="btn-add">+ Nueva Tarea</button>
   </div>
+
+  <!-- Aqui recibe los datos-->
+  <app-task-form 
+    *ngIf="showForm" 
+    [task]="selectedTask" 
+    [isEditMode]="editing"
+    (onSaved)="handleSave()"
+    (onCancel)="showForm = false">
+  </app-task-form>
+
+
+<!-- COMENTataswwsIO-->
+  
+<div class="dashboard-container">
+  
 
   <div class="table-responsive">
     <table class="custom-table">
       <thead>
         <tr>
           <th>Título</th>
-          <th>Descripción</th>
-          <th>Fecha de Entrega</th>
           <th>Estado</th>
-          <th class="text-center">Acciones</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let task of tasks;">
-          <td class="font-bold">{{ task.title }}</td>
-          <td class="text-muted">{{ task.description }}</td>
-          <td>{{ task.dueDate ? (task.dueDate | date:'dd/MM/yyyy') : 'Sin fecha' }}</td>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.title }}</td>
           <td>
             <span [class]="task.isCompleted ? 'badge success' : 'badge warning'">
-              {{ task.isCompleted ? 'Completada' : 'Pendiente' }}
+              {{ task.isCompleted ? 'Lista' : 'Pendiente' }}
             </span>
           </td>
-          <td class="text-center">
-            <div class="action-buttons">
-              <button class="btn-icon edit" title="Editar">
-                <span>✏️</span>
-              </button>
-              <button class="btn-icon delete" (click)="deleteTask(task.id)" title="Eliminar">
-                <span>🗑️</span>
-              </button>
-            </div>
+          <td>
+           <button (click)="prepareEditTask(task)">✏️ Editar</button>
+            <button class="btn-icon delete" (click)="deleteTask(task.id)">🗑️</button>
           </td>
         </tr>
-  
       </tbody>
     </table>
   </div>
+</div>
+
+
 </div>
 
 

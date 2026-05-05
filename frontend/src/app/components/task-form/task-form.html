@@ -1,1 +1,71 @@
-<p>task-form works!</p>
+<div class="form-overlay">
+  <div class="form-card">
+    <div class="form-header">
+      <h2>{{ isEditMode ? 'Editar Tarea' : 'Nueva Tarea' }}</h2>
+      <button class="btn-close" (click)="cancel()">×</button>
+    </div>
+
+    <form (ngSubmit)="save()" #taskForm="ngForm">
+      <div class="form-body">
+        
+        <div class="form-group">
+          <label for="title">Título</label>
+          <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            [(ngModel)]="task.title" 
+            required 
+            placeholder="Ej: Finalizar reporte"
+            #title="ngModel">
+          <small class="error" *ngIf="title.invalid && title.touched">
+            El título es obligatorio.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <textarea 
+            id="description" 
+            name="description" 
+            [(ngModel)]="task.description" 
+            placeholder="Detalles de la tarea..."
+            rows="3">
+          </textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dueDate">Fecha de Entrega</label>
+            <input 
+              type="date" 
+              id="dueDate" 
+              name="dueDate" 
+              [(ngModel)]="task.dueDate">
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-container">
+              <input 
+                type="checkbox" 
+                name="isCompleted" 
+                [(ngModel)]="task.isCompleted">
+              <span class="checkmark"></span>
+              ¿Completada?
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-footer">
+        <button type="button" class="btn-secondary" (click)="cancel()">
+          Cancelar
+        </button>
+        <button type="submit" class="btn-primary" [disabled]="taskForm.invalid">
+          {{ isEditMode ? 'Guardar Cambios' : 'Crear Tarea' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
